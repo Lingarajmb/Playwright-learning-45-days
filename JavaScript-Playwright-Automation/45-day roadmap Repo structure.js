@@ -13,8 +13,8 @@
 // │   ├── 05 - Loops / : Status : Completed ✅
 // │   ├── 06 - Functions / : Status : Completed ✅
 // │   ├── 07 - Arrays /  : Status : Completed ✅
-// │   ├── 08 - Objects /🔄 IN PROGRESS
-// │   ├── 09 - Strings - and - Dates /
+// │   ├── 08 - Objects /: Status : Completed ✅
+// │   ├── 09 - Strings - and - Dates /🔄 IN PROGRESS
 // │   ├── 10 - ES6 - and - OOP /
 // │   ├── 11 - Async - JavaScript /
 // │   ├── 12 - JSON /
