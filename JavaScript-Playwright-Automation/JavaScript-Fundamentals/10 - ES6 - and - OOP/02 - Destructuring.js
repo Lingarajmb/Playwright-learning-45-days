@@ -743,6 +743,13 @@ console.log(third);
 // };
 
 // const { name, role = "QA Engineer" } = user;
+// What is the output?
+
+// const user = {
+//     name: "Lingaraj"
+// };
+
+// const { name, role = "QA Engineer" } = user;
 
 // console.log(name);
 // console.log(role);
