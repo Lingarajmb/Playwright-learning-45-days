@@ -14,8 +14,8 @@
 // │   ├── 06 - Functions / : Status : Completed ✅
 // │   ├── 07 - Arrays /  : Status : Completed ✅
 // │   ├── 08 - Objects /: Status : Completed ✅
-// │   ├── 09 - Strings - and - Dates /🔄 IN PROGRESS
-// │   ├── 10 - ES6 - and - OOP /
+// │   ├── 09 - Strings - and - Dates //: Status : Completed ✅
+// │   ├── 10 - ES6 - and - OOP /🔄 IN PROGRESS
 // │   ├── 11 - Async - JavaScript /
 // │   ├── 12 - JSON /
 // │   └── 13 - Error - Handling /
