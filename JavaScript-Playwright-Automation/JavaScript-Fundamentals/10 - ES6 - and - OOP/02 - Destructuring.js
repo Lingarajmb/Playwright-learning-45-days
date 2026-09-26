@@ -1632,3 +1632,12 @@ runTest(testData);
 // ⬆️ Array destructuring in the parameter
 
 // You've now covered another important part of Destructuring. 🔥
+
+
+dummy
+// ⬆️ Object destructuring in the parameter
+
+// And:
+
+// function printBrowser([browser1, browser2]) {
+// }
