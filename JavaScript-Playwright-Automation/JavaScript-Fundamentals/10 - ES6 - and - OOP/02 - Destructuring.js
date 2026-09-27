@@ -1,1203 +1,1937 @@
-// Chalooo macha 😎🔥 Arrow Functions complete → next roadmap concept is Destructuring.
+// // Chalooo macha 😎🔥 Arrow Functions complete → next roadmap concept is Destructuring.
 
-// 📁 Exact file path
-// Playwright - learning - 45 - days/
-// └── 01 - JavaScript - Fundamentals/
-//     └── 10 - ES6 - and - OOP/
-//         └── 02 - Destructuring.js
-// 🎯 Topic 2: Destructuring
+// const { use } = require("react");
 
-// We’ll cover only Destructuring now, in this order:
+// // 📁 Exact file path
+// // Playwright - learning - 45 - days/
+// // └── 01 - JavaScript - Fundamentals/
+// //     └── 10 - ES6 - and - OOP/
+// //         └── 02 - Destructuring.js
+// // 🎯 Topic 2: Destructuring
 
-// What is Destructuring?
-// Why do we use it?
-// Array Destructuring
-// Object Destructuring
-// Default values
-// Renaming variables in Object Destructuring
-// QA/Playwright automation examples
-// Important rules
-// Complete practice set
-// Evaluation + score
+// // We’ll cover only Destructuring now, in this order:
 
-// We won't jump to Spread Operator until Destructuring is completed. 💯
+// // What is Destructuring?
+// // Why do we use it?
+// // Array Destructuring
+// // Object Destructuring
+// // Default values
+// // Renaming variables in Object Destructuring
+// // QA/Playwright automation examples
+// // Important rules
+// // Complete practice set
+// // Evaluation + score
 
-// 1️⃣ What is Destructuring?
+// // We won't jump to Spread Operator until Destructuring is completed. 💯
 
-// Destructuring is an ES6 feature that allows us to extract values from arrays or objects and store them directly into variables.
+// // 1️⃣ What is Destructuring?
 
-// Without Destructuring
-// const user = {
-//     name: "Lingaraj",
-//     role: "QA Engineer",
-//     experience: 4
-// };
+// // Destructuring is an ES6 feature that allows us to extract values from arrays or objects and store them directly into variables.
 
-// const name = user.name;
-// const role = user.role;
-// const experience = user.experience;
+// // Without Destructuring
+// // const user = {
+// //     name: "Lingaraj",
+// //     role: "QA Engineer",
+// //     experience: 4
+// // };
 
-// console.log(name);
-// console.log(role);
-// console.log(experience);
+// // const name = user.name;
+// // const role = user.role;
+// // const experience = user.experience;
 
-// We access each property separately.
+// // console.log(name);
+// // console.log(role);
+// // console.log(experience);
 
-// With Destructuring
-// const user = {
-//     name: "Lingaraj",
-//     role: "QA Engineer",
-//     experience: 4
-// };
+// // We access each property separately.
 
-// const { name, role, experience } = user;
+// // With Destructuring
+// // const user = {
+// //     name: "Lingaraj",
+// //     role: "QA Engineer",
+// //     experience: 4
+// // };
 
-// console.log(name);
-// console.log(role);
-// console.log(experience);
+// // const { name, role, experience } = user;
 
-// Much cleaner. 👍
+// // console.log(name);
+// // console.log(role);
+// // console.log(experience);
 
-// 2️⃣ Array Destructuring
+// // Much cleaner. 👍
 
-// For arrays, destructuring happens based on position/index.
+// // 2️⃣ Array Destructuring
 
-// const tools = ["Playwright", "Postman", "Jenkins"];
+// // For arrays, destructuring happens based on position/index.
 
-// const [tool1, tool2, tool3] = tools;
+// // const tools = ["Playwright", "Postman", "Jenkins"];
 
-// console.log(tool1);
-// console.log(tool2);
-// console.log(tool3);
+// // const [tool1, tool2, tool3] = tools;
 
-// Output:
+// // console.log(tool1);
+// // console.log(tool2);
+// // console.log(tool3);
 
-// Playwright
-// Postman
-// Jenkins
+// // Output:
 
-// The mapping is:
+// // Playwright
+// // Postman
+// // Jenkins
 
-// Index 0 → tool1
-// Index 1 → tool2
-// Index 2 → tool3
-// Important ⚠️
+// // The mapping is:
 
-// Array destructuring depends on position, not variable name.
+// // Index 0 → tool1
+// // Index 1 → tool2
+// // Index 2 → tool3
+// // Important ⚠️
 
-// const tools = ["Playwright", "Postman"];
+// // Array destructuring depends on position, not variable name.
 
-// const [first, second] = tools;
+// // const tools = ["Playwright", "Postman"];
 
-// console.log(first);   // Playwright
-// console.log(second);  // Postman
+// // const [first, second] = tools;
 
-// You could even write:
+// // console.log(first);   // Playwright
+// // console.log(second);  // Postman
 
-// const [abc, xyz] = tools;
+// // You could even write:
 
-// console.log(abc); // Playwright
-// console.log(xyz); // Postman
+// // const [abc, xyz] = tools;
 
-// The variable names don't matter. The positions do.
+// // console.log(abc); // Playwright
+// // console.log(xyz); // Postman
 
-// 3️⃣ Skipping Array Values
+// // The variable names don't matter. The positions do.
 
-// You can skip values using an empty comma.
+// // 3️⃣ Skipping Array Values
 
-// const tools = ["Playwright", "Postman", "Jenkins"];
+// // You can skip values using an empty comma.
 
-// const [first, , third] = tools;
+// // const tools = ["Playwright", "Postman", "Jenkins"];
 
-// console.log(first);
-// console.log(third);
+// // const [first, , third] = tools;
 
-// Output:
+// // console.log(first);
+// // console.log(third);
 
-// Playwright
-// Jenkins
+// // Output:
 
-// Here:
+// // Playwright
+// // Jenkins
 
-// [first, , third]
+// // Here:
 
-// means:
+// // [first, , third]
 
-// first → index 0
-// skip  → index 1
-// third → index 2
-// 4️⃣ Object Destructuring
+// // means:
 
-// Object destructuring works using property names.
+// // first → index 0
+// // skip  → index 1
+// // third → index 2
+// // 4️⃣ Object Destructuring
 
-// const employee = {
-//     name: "Lingaraj",
-//     role: "QA Engineer",
-//     experience: 4
-// };
+// // Object destructuring works using property names.
 
-// const { name, role, experience } = employee;
+// // const employee = {
+// //     name: "Lingaraj",
+// //     role: "QA Engineer",
+// //     experience: 4
+// // };
 
-// console.log(name);
-// console.log(role);
-// console.log(experience);
+// // const { name, role, experience } = employee;
 
-// Output:
+// // console.log(name);
+// // console.log(role);
+// // console.log(experience);
 
-// Lingaraj
-// QA Engineer
-// 4
-// Important difference
+// // Output:
 
-// Array:
+// // Lingaraj
+// // QA Engineer
+// // 4
+// // Important difference
 
-// const [a, b] = array;
+// // Array:
 
-// ➡️ Based on position
+// // const [a, b] = array;
 
-// Object:
+// // ➡️ Based on position
 
-// const { name, role } = employee;
+// // Object:
 
-// ➡️ Based on property name
+// // const { name, role } = employee;
 
-// 5️⃣ Object Destructuring with Different Variable Name
+// // ➡️ Based on property name
 
-// Suppose:
+// // 5️⃣ Object Destructuring with Different Variable Name
 
-// const employee = {
-//     name: "Lingaraj",
-//     experience: 4
-// };
+// // Suppose:
 
-// We can rename the variables:
+// // const employee = {
+// //     name: "Lingaraj",
+// //     experience: 4
+// // };
 
-// const { name: employeeName, experience: years } = employee;
+// // We can rename the variables:
 
-// console.log(employeeName);
-// console.log(years);
+// // const { name: employeeName, experience: years } = employee;
 
-// Output:
+// // console.log(employeeName);
+// // console.log(years);
 
-// Lingaraj
-// 4
+// // Output:
 
-// Here:
+// // Lingaraj
+// // 4
 
-// name: employeeName
+// // Here:
 
-// means:
+// // name: employeeName
 
-// Take the name property and store its value in employeeName.
+// // means:
 
-// 6️⃣ QA / Playwright Example
+// // Take the name property and store its value in employeeName.
 
-// This becomes useful when working with test data.
+// // 6️⃣ QA / Playwright Example
 
-// const testUser = {
-//     username: "testuser",
-//     password: "Test@123",
-//     role: "admin"
-// };
+// // This becomes useful when working with test data.
 
-// const { username, password, role } = testUser;
+// // const testUser = {
+// //     username: "testuser",
+// //     password: "Test@123",
+// //     role: "admin"
+// // };
 
-// console.log(username);
-// console.log(password);
-// console.log(role);
+// // const { username, password, role } = testUser;
 
-// Instead of repeatedly writing:
+// // console.log(username);
+// // console.log(password);
+// // console.log(role);
 
-// testUser.username
-// testUser.password
-// testUser.role
+// // Instead of repeatedly writing:
 
-// we can directly use:
+// // testUser.username
+// // testUser.password
+// // testUser.role
 
-// username
-// password
-// role
+// // we can directly use:
 
-// This is especially useful when handling test-data objects, API responses, configuration objects, etc.
+// // username
+// // password
+// // role
 
-// 🧠 Remember this
-// Type	Destructuring	Based on
-// Array	[a, b]	Position
-// Object	{name, role}	Property name
-// One-line memory trick:
+// // This is especially useful when handling test-data objects, API responses, configuration objects, etc.
 
-// Array → Position 📦
-// Object → Property Name 🔑
+// // 🧠 Remember this
+// // Type	Destructuring	Based on
+// // Array	[a, b]	Position
+// // Object	{name, role}	Property name
+// // One-line memory trick:
 
-// 📝 Your practice — don't look for answers yet 😎
+// // Array → Position 📦
+// // Object → Property Name 🔑
 
-// Create:
-// 02 - Destructuring.js
+// // 📝 Your practice — don't look for answers yet 😎
 
-// Q1 — Array Destructuring
-//const browsers = ["Chrome", "Firefox", "Edge"];
-// Extract all three values using array destructuring and print them.
+// // Create:
+// // 02 - Destructuring.js
 
-// // Q1 answer :
-// const browsers = ["Chrome", "Firefox", "Edge"];
-// const [first, Sec, third] = browsers;
-// console.log(first);
-// console.log(Sec);
-//console.log(third);
+// // Q1 — Array Destructuring
+// //const browsers = ["Chrome", "Firefox", "Edge"];
+// // Extract all three values using array destructuring and print them.
 
-// Q2 — Array Output Prediction
-// const tools = ["Playwright", "Postman", "Jenkins"];
-// const [first, , third] = tools;
-// console.log(first);
-// console.log(third);
-// What is the output?
+// // // Q1 answer :
+// // const browsers = ["Chrome", "Firefox", "Edge"];
+// // const [first, Sec, third] = browsers;
+// // console.log(first);
+// // console.log(Sec);
+// //console.log(third);
 
-// Q2 answer : Playwright and Jenkins
+// // Q2 — Array Output Prediction
+// // const tools = ["Playwright", "Postman", "Jenkins"];
+// // const [first, , third] = tools;
+// // console.log(first);
+// // console.log(third);
+// // What is the output?
 
-// Q3 — Object Destructuring
-// const employee = {
-//     name: "Lingaraj",
-//     role: "QA Engineer",
-//     experience: 4
-// };
-// Extract name and role using object destructuring.
+// // Q2 answer : Playwright and Jenkins
 
-// Q3 answer :
-// const employee = {
-//     name: "Lingaraj",
-//     role: "QA Engineer",
-//     experience: 4
-// };
-// const { name, role } = employee;
-// console.log(name);
-// console.log(role);
+// // Q3 — Object Destructuring
+// // const employee = {
+// //     name: "Lingaraj",
+// //     role: "QA Engineer",
+// //     experience: 4
+// // };
+// // Extract name and role using object destructuring.
 
-// Q4 — Object Output Prediction
-// const user = {
-//     username: "lingaraj",
-//     role: "admin"
-// };
-// const { username, role } = user;
-// console.log(username);
-// console.log(role);
-// What is the output?
+// // Q3 answer :
+// // const employee = {
+// //     name: "Lingaraj",
+// //     role: "QA Engineer",
+// //     experience: 4
+// // };
+// // const { name, role } = employee;
+// // console.log(name);
+// // console.log(role);
 
-// Q4 answer : lingaraj and  admin
+// // Q4 — Object Output Prediction
+// // const user = {
+// //     username: "lingaraj",
+// //     role: "admin"
+// // };
+// // const { username, role } = user;
+// // console.log(username);
+// // console.log(role);
+// // What is the output?
 
-// Q5 — Rename
-// Given:
-// const employee = {
-//     name: "Lingaraj",
-//     experience: 4
-// };
-// Using destructuring, store:
-// name → employeeName
-// experience → years
+// // Q4 answer : lingaraj and  admin
 
-// Q5 answer :
-// const employee = {
-//     name: "Lingaraj",
-//     experience: 4
-// };
-// const { name: employeeName, experience: years } = employee;
-// console.log(employeeName);
-// console.log(years);
+// // Q5 — Rename
+// // Given:
+// // const employee = {
+// //     name: "Lingaraj",
+// //     experience: 4
+// // };
+// // Using destructuring, store:
+// // name → employeeName
+// // experience → years
 
-// Q6 — Concept
-// What is the main difference between Array Destructuring and Object Destructuring?
+// // Q5 answer :
+// // const employee = {
+// //     name: "Lingaraj",
+// //     experience: 4
+// // };
+// // const { name: employeeName, experience: years } = employee;
+// // console.log(employeeName);
+// // console.log(years);
 
-// Q6 answer :
-// Array: const [a, b] = array; --> Based on position
-//Object: const { name, role } = employee; --> Based on property name
+// // Q6 — Concept
+// // What is the main difference between Array Destructuring and Object Destructuring?
 
-// Q7 — Practical
-// You have:
-// const testData = {
-//     username: "testuser",
-//     password: "Test@123",
-//     browser: "Chrome"
-// };
-// Use destructuring to extract all three values and print them.
+// // Q6 answer :
+// // Array: const [a, b] = array; --> Based on position
+// //Object: const { name, role } = employee; --> Based on property name
 
-// Q7 answer :
-// const testData = {
-//     username: "testuser",
-//     password: "Test@123",
-//     browser: "Chrome"
-// };
+// // Q7 — Practical
+// // You have:
+// // const testData = {
+// //     username: "testuser",
+// //     password: "Test@123",
+// //     browser: "Chrome"
+// // };
+// // Use destructuring to extract all three values and print them.
 
-// const { username, password, browser } = testData;
+// // Q7 answer :
+// // const testData = {
+// //     username: "testuser",
+// //     password: "Test@123",
+// //     browser: "Chrome"
+// // };
 
-// console.log(username);
-// console.log(password);
-// console.log(browser);
+// // const { username, password, browser } = testData;
 
+// // console.log(username);
+// // console.log(password);
+// // console.log(browser);
 
-// Q8 — Identify the problem
-// What is wrong here?
-// const user = {
-//     name: "Lingaraj",
-//     role: "QA"
-// };
-// const [name, role] = user;
-// Explain why.
 
-// yes this incorrect, beacause we have object we should use the Object Destructuring, but Array Destructuring use that is the reson this is incorrect
+// // Q8 — Identify the problem
+// // What is wrong here?
+// // const user = {
+// //     name: "Lingaraj",
+// //     role: "QA"
+// // };
+// // const [name, role] = user;
+// // Explain why.
 
+// // yes this incorrect, beacause we have object we should use the Object Destructuring, but Array Destructuring use that is the reson this is incorrect
 
-// Macha 🔥 excellent work. You got the core Destructuring concept clearly. Let's evaluate each one.
 
-// ✅ Destructuring Practice Evaluation
-// Q1 — Array Destructuring ✅
+// // Macha 🔥 excellent work. You got the core Destructuring concept clearly. Let's evaluate each one.
 
-// Your code:
+// // ✅ Destructuring Practice Evaluation
+// // Q1 — Array Destructuring ✅
 
-// const browsers = ["Chrome", "Firefox", "Edge"];
+// // Your code:
 
-// const [first, Sec, third] = browsers;
+// // const browsers = ["Chrome", "Firefox", "Edge"];
 
-// console.log(first);
-// console.log(Sec);
-// console.log(third);
+// // const [first, Sec, third] = browsers;
 
-// Correct. 🎯
+// // console.log(first);
+// // console.log(Sec);
+// // console.log(third);
 
-// Output:
+// // Correct. 🎯
 
-// Chrome
-// Firefox
-// Edge
+// // Output:
 
-// Sec is a valid variable name. Usually I'd recommend second for readability, but this is not an error.
+// // Chrome
+// // Firefox
+// // Edge
 
-// Score: 1/1
+// // Sec is a valid variable name. Usually I'd recommend second for readability, but this is not an error.
 
-// Q2 — Array Output Prediction ✅
+// // Score: 1/1
 
-// Your answer:
+// // Q2 — Array Output Prediction ✅
 
-// Playwright and Jenkins
+// // Your answer:
 
-// Correct. 🎯
+// // Playwright and Jenkins
 
-// Actual output:
+// // Correct. 🎯
 
-// Playwright
-// Jenkins
+// // Actual output:
 
-// Because:
+// // Playwright
+// // Jenkins
 
-// const [first, , third] = tools;
+// // Because:
 
-// The second value, "Postman", is skipped.
+// // const [first, , third] = tools;
 
-// Score: 1/1
+// // The second value, "Postman", is skipped.
 
-// Q3 — Object Destructuring ✅
+// // Score: 1/1
 
-// Your code:
+// // Q3 — Object Destructuring ✅
 
-// const { name, role } = employee;
+// // Your code:
 
-// console.log(name);
-// console.log(role);
+// // const { name, role } = employee;
 
-// Perfect. 🎯
+// // console.log(name);
+// // console.log(role);
 
-// Output:
+// // Perfect. 🎯
 
-// Lingaraj
-// QA Engineer
+// // Output:
 
-// Score: 1/1
+// // Lingaraj
+// // QA Engineer
 
-// Q4 — Object Output Prediction ✅
+// // Score: 1/1
 
-// Your answer:
+// // Q4 — Object Output Prediction ✅
 
-// lingaraj and admin
+// // Your answer:
 
-// Correct. 🎯
+// // lingaraj and admin
 
-// Actual output:
+// // Correct. 🎯
 
-// lingaraj
-// admin
+// // Actual output:
 
-// Your answer format is different from the console format, but the values are completely correct.
+// // lingaraj
+// // admin
 
-// Score: 1/1
+// // Your answer format is different from the console format, but the values are completely correct.
 
-// Q5 — Rename ✅
+// // Score: 1/1
 
-// Your code:
+// // Q5 — Rename ✅
 
-// const { name: employeeName, experience: years } = employee;
+// // Your code:
 
-// console.log(employeeName);
-// console.log(years);
+// // const { name: employeeName, experience: years } = employee;
 
-// Excellent. 💯
+// // console.log(employeeName);
+// // console.log(years);
 
-// This correctly means:
+// // Excellent. 💯
 
-// name       → employeeName
-// experience → years
+// // This correctly means:
 
-// Output:
+// // name       → employeeName
+// // experience → years
 
-// Lingaraj
-// 4
+// // Output:
 
-// Score: 1/1
+// // Lingaraj
+// // 4
 
-// Q6 — Concept ✅
+// // Score: 1/1
 
-// Your answer:
+// // Q6 — Concept ✅
 
-// Array → Based on position
-// Object → Based on property name
+// // Your answer:
 
-// Exactly right. 🔥
+// // Array → Based on position
+// // Object → Based on property name
 
-// Your examples are also correct:
+// // Exactly right. 🔥
 
-// const [a, b] = array;
+// // Your examples are also correct:
 
-// → position/index
+// // const [a, b] = array;
 
-// const { name, role } = employee;
+// // → position/index
 
-// → property names
+// // const { name, role } = employee;
 
-// Score: 1/1
+// // → property names
 
-// Q7 — Practical ✅
+// // Score: 1/1
 
-// Your code:
+// // Q7 — Practical ✅
 
-// const { username, password, browser } = testData;
+// // Your code:
 
-// console.log(username);
-// console.log(password);
-// console.log(browser);
+// // const { username, password, browser } = testData;
 
-// Perfect. 🎯
+// // console.log(username);
+// // console.log(password);
+// // console.log(browser);
 
-// Output:
+// // Perfect. 🎯
 
-// testuser
-// Test@123
-// Chrome
+// // Output:
 
-// This is exactly the kind of destructuring you'll use with test data objects in automation.
+// // testuser
+// // Test@123
+// // Chrome
 
-// Score: 1/1
+// // This is exactly the kind of destructuring you'll use with test data objects in automation.
 
-// Q8 — Identify the Problem ✅
+// // Score: 1/1
 
-// Your explanation:
+// // Q8 — Identify the Problem ✅
 
-// We have an object, so we should use Object Destructuring. Array Destructuring is the reason this is incorrect.
+// // Your explanation:
 
-// Correct. 👍
+// // We have an object, so we should use Object Destructuring. Array Destructuring is the reason this is incorrect.
 
-// This:
+// // Correct. 👍
 
-// const [name, role] = user;
+// // This:
 
-// is Array Destructuring syntax.
+// // const [name, role] = user;
 
-// But user is an object:
+// // is Array Destructuring syntax.
 
-// const user = {
-//     name: "Lingaraj",
-//     role: "QA"
-// };
+// // But user is an object:
 
-// Therefore:
+// // const user = {
+// //     name: "Lingaraj",
+// //     role: "QA"
+// // };
 
-// const { name, role } = user;
+// // Therefore:
 
-// is the correct syntax.
+// // const { name, role } = user;
 
-// One important detail
+// // is the correct syntax.
 
-// It's not just that "object → object destructuring" by convention.
+// // One important detail
 
-// The syntax itself tells JavaScript what kind of destructuring you're requesting:
+// // It's not just that "object → object destructuring" by convention.
 
-// [a, b]       // Array destructuring
-// {name, role}  // Object destructuring
+// // The syntax itself tells JavaScript what kind of destructuring you're requesting:
 
-// So:
+// // [a, b]       // Array destructuring
+// // {name, role}  // Object destructuring
 
-// const [name, role] = user;
+// // So:
 
-// tries to use the object as an iterable, which a normal object isn't.
+// // const [name, role] = user;
 
-// Score: 1/1
+// // tries to use the object as an iterable, which a normal object isn't.
 
-// 🏆 Final Score
-// Question	Score
-// Q1	1/1
-// Q2	1/1
-// Q3	1/1
-// Q4	1/1
-// Q5	1/1
-// Q6	1/1
-// Q7	1/1
-// Q8	1/1
-// Total	8/8
-// 🎯 Score: 10/10 — 100%
+// // Score: 1/1
 
-// No conceptual mistakes. 🔥
+// // 🏆 Final Score
+// // Question	Score
+// // Q1	1/1
+// // Q2	1/1
+// // Q3	1/1
+// // Q4	1/1
+// // Q5	1/1
+// // Q6	1/1
+// // Q7	1/1
+// // Q8	1/1
+// // Total	8/8
+// // 🎯 Score: 10/10 — 100%
 
-// The only tiny style suggestion is:
+// // No conceptual mistakes. 🔥
 
-// const [first, second, third] = browsers;
+// // The only tiny style suggestion is:
 
-// instead of:
+// // const [first, second, third] = browsers;
 
-// const [first, Sec, third] = browsers;
+// // instead of:
 
-// But Sec is completely valid JavaScript, so I'm not deducting anything.
+// // const [first, Sec, third] = browsers;
 
-// ✅ What you've learned so far
+// // But Sec is completely valid JavaScript, so I'm not deducting anything.
 
-// You now understand:
+// // ✅ What you've learned so far
 
-// // Array
-// const [a, b, c] = array;
-// Position-based extraction
-// Skipping values
-// Array destructuring
+// // You now understand:
 
-// And:
+// // // Array
+// // const [a, b, c] = array;
+// // Position-based extraction
+// // Skipping values
+// // Array destructuring
 
-// // Object
-// const { name, role } = object;
-// Property-based extraction
-// Renaming properties
-// const { name: employeeName } = employee;
-// Next Destructuring concept
+// // And:
 
-// Default Values in Destructuring
+// // // Object
+// // const { name, role } = object;
+// // Property-based extraction
+// // Renaming properties
+// // const { name: employeeName } = employee;
+// // Next Destructuring concept
 
-// We'll continue with one concept only, then practice it before moving forward. 🔥
+// // Default Values in Destructuring
 
-///--------------------------------------------------------------------------------------------------------------------------------------------
+// // We'll continue with one concept only, then practice it before moving forward. 🔥
 
+// ///--------------------------------------------------------------------------------------------------------------------------------------------
 
-// Perfect macha 😎🔥
 
-//*********************************************************** */
-// Next concept: Default Values in Destructuring
-//*********************************************************** */
+// // Perfect macha 😎🔥
 
-// We’ll continue in:
+// //*********************************************************** */
+// // Next concept: Default Values in Destructuring
+// //*********************************************************** */
 
-// Playwright - learning - 45 - days/
-// └── 01 - JavaScript - Fundamentals/
-//     └── 10 - ES6 - and - OOP/
-//         └── 02 - Destructuring.js
-// 1️⃣ What are Default Values?
+// // We’ll continue in:
 
-// A default value is used when the value you're trying to destructure is undefined.
+// // Playwright - learning - 45 - days/
+// // └── 01 - JavaScript - Fundamentals/
+// //     └── 10 - ES6 - and - OOP/
+// //         └── 02 - Destructuring.js
+// // 1️⃣ What are Default Values?
 
-// Array example
-// const browsers = ["Chrome"];
+// // A default value is used when the value you're trying to destructure is undefined.
 
-// const [first, second = "Firefox"] = browsers;
+// // Array example
+// // const browsers = ["Chrome"];
 
-// console.log(first);
-// console.log(second);
+// // const [first, second = "Firefox"] = browsers;
 
-// Output:
+// // console.log(first);
+// // console.log(second);
 
-// Chrome
-// Firefox
+// // Output:
 
-// Why?
+// // Chrome
+// // Firefox
 
-// first  → "Chrome"
-// second → undefined → default "Firefox"
-// Another example
-// const tools = ["Playwright", "Postman"];
+// // Why?
 
-// const [first, second, third = "Jenkins"] = tools;
+// // first  → "Chrome"
+// // second → undefined → default "Firefox"
+// // Another example
+// // const tools = ["Playwright", "Postman"];
 
-// console.log(first);
-// console.log(second);
-// console.log(third);
+// // const [first, second, third = "Jenkins"] = tools;
 
-// Output:
+// // console.log(first);
+// // console.log(second);
+// // console.log(third);
 
-// Playwright
-// Postman
-// Jenkins
+// // Output:
 
-// Because there is no third value, the default value is used.
+// // Playwright
+// // Postman
+// // Jenkins
 
-// 2️⃣ Object Destructuring Default Value
-// const user = {
-//     name: "Lingaraj"
-// };
+// // Because there is no third value, the default value is used.
 
-// const { name, role = "QA Engineer" } = user;
+// // 2️⃣ Object Destructuring Default Value
+// // const user = {
+// //     name: "Lingaraj"
+// // };
 
-// console.log(name);
-// console.log(role);
+// // const { name, role = "QA Engineer" } = user;
 
-// Output:
+// // console.log(name);
+// // console.log(role);
 
-// Lingaraj
-// QA Engineer
+// // Output:
 
-// Because role doesn't exist in the object, JavaScript uses:
+// // Lingaraj
+// // QA Engineer
 
-// role = "QA Engineer"
-// ⚠️ Important Rule
+// // Because role doesn't exist in the object, JavaScript uses:
 
-// The default value is used when the value is undefined.
+// // role = "QA Engineer"
+// // ⚠️ Important Rule
 
-// For example:
+// // The default value is used when the value is undefined.
 
-// const user = {
-//     name: "Lingaraj",
-//     role: undefined
-// };
+// // For example:
 
-// const { role = "QA Engineer" } = user;
+// // const user = {
+// //     name: "Lingaraj",
+// //     role: undefined
+// // };
 
-// console.log(role);
+// // const { role = "QA Engineer" } = user;
 
-// Output:
+// // console.log(role);
 
-// QA Engineer
+// // Output:
 
-// But:
+// // QA Engineer
 
-// const user = {
-//     role: null
-// };
+// // But:
 
-// const { role = "QA Engineer" } = user;
+// // const user = {
+// //     role: null
+// // };
 
-// console.log(role);
+// // const { role = "QA Engineer" } = user;
 
-// Output:
+// // console.log(role);
 
-// null
+// // Output:
 
-// The default does not replace null.
+// // null
 
-// 🧠 Remember
-// undefined → default value is used
-// null      → default value is NOT used
+// // The default does not replace null.
 
-// This is useful in automation when some test-data fields may be missing.
+// // 🧠 Remember
+// // undefined → default value is used
+// // null      → default value is NOT used
 
-// 📝 Practice — Default Values
-// Q1
-// What is the output?
-// const browsers = ["Chrome"];
-// const [first, second = "Firefox"] = browsers;
-// console.log(first);
-// console.log(second);
+// // This is useful in automation when some test-data fields may be missing.
 
-//Q1 Answer : Chrome and Firefox
+// // 📝 Practice — Default Values
+// // Q1
+// // What is the output?
+// // const browsers = ["Chrome"];
+// // const [first, second = "Firefox"] = browsers;
+// // console.log(first);
+// // console.log(second);
 
-// Q2
-// Write destructuring code for:
-// const tools = ["Playwright", "Postman"];
-// Extract:
-// first  → Playwright
-// second → Postman
-// third  → Jenkins
-// Use a default value for third.
+// //Q1 Answer : Chrome and Firefox
 
-//Q2 Answer :
-// const tools = ["Playwright", "Postman"];
-// const [first, second, third = "Jenkins"] = tools;
-// console.log(first);
-// console.log(second);
-// console.log(third);
+// // Q2
+// // Write destructuring code for:
+// // const tools = ["Playwright", "Postman"];
+// // Extract:
+// // first  → Playwright
+// // second → Postman
+// // third  → Jenkins
+// // Use a default value for third.
 
+// //Q2 Answer :
+// // const tools = ["Playwright", "Postman"];
+// // const [first, second, third = "Jenkins"] = tools;
+// // console.log(first);
+// // console.log(second);
+// // console.log(third);
 
-// Q3
-// What is the output?
-// const user = {
-//     name: "Lingaraj"
-// };
-// const { name, role = "QA Engineer" } = user;
-// console.log(name);
-// console.log(role);
 
-//Q3 Answer : Lingaraj and  QA Engineer
+// // Q3
+// // What is the output?
+// // const user = {
+// //     name: "Lingaraj"
+// // };
+// // const { name, role = "QA Engineer" } = user;
+// // console.log(name);
+// // console.log(role);
 
-// Q4
-// What is the output?
-// const user = {
-//     name: "Lingaraj",
-//     role: undefined
-// };
-// const { role = "Tester" } = user;
-// console.log(role);
+// //Q3 Answer : Lingaraj and  QA Engineer
 
-//Q4 Answer :  Tester
+// // Q4
+// // What is the output?
+// // const user = {
+// //     name: "Lingaraj",
+// //     role: undefined
+// // };
+// // const { role = "Tester" } = user;
+// // console.log(role);
 
-// Q5
-// What is the output?
-// const user = {
-//     role: null
-// };
-// const { role = "Tester" } = user;
-// console.log(role);
+// //Q4 Answer :  Tester
 
-//Q5 Answer : null
+// // Q5
+// // What is the output?
+// // const user = {
+// //     role: null
+// // };
+// // const { role = "Tester" } = user;
+// // console.log(role);
 
-// Q6 — Concept
-// Why is the default value used when the value is undefined, but not when it is null?
+// //Q5 Answer : null
 
-//Q6 Answer : Default values only trigger on undefined (meaning "no value given"), not null (which is treated as an intentional, explicit value).
+// // Q6 — Concept
+// // Why is the default value used when the value is undefined, but not when it is null?
 
+// //Q6 Answer : Default values only trigger on undefined (meaning "no value given"), not null (which is treated as an intentional, explicit value).
 
-// Q7 — Automation Scenario
-// You receive this test data:
-// const testData = {
-//     username: "testuser",
-//     password: "Test@123"
-// };
-// Destructure:
-// username
-// password
-// browser
-// If browser is missing, the default should be:
-// "Chrome"
-// Write the code.
 
-// //Q7 answer;
-// const testData = {
-//     username: "testuser",
-//     password: "Test@123"
-// };
-// const { username, password, browser = "Chrome" } = testData;
-// console.log(username);
-// console.log(password);
-// console.log(browser);
+// // Q7 — Automation Scenario
+// // You receive this test data:
+// // const testData = {
+// //     username: "testuser",
+// //     password: "Test@123"
+// // };
+// // Destructure:
+// // username
+// // password
+// // browser
+// // If browser is missing, the default should be:
+// // "Chrome"
+// // Write the code.
 
-// Macha 🔥 excellent! You understood Default Values in Destructuring correctly.
-// 🏆 Evaluation
-// Q1 — Output ✅
-// Your answer:
-// Chrome and Firefox
-// Correct.
-// Chrome
-// Firefox
-// 1/1
+// // //Q7 answer;
+// // const testData = {
+// //     username: "testuser",
+// //     password: "Test@123"
+// // };
+// // const { username, password, browser = "Chrome" } = testData;
+// // console.log(username);
+// // console.log(password);
+// // console.log(browser);
 
+// // Macha 🔥 excellent! You understood Default Values in Destructuring correctly.
+// // 🏆 Evaluation
+// // Q1 — Output ✅
+// // Your answer:
+// // Chrome and Firefox
+// // Correct.
+// // Chrome
+// // Firefox
+// // 1/1
 
-// Q2 — Array Default Value ✅
-// const [first, second, third = "Jenkins"] = tools;
-// Perfect. 🎯
-// 1/1
-// Q3 — Object Default Value ✅
-// Your answer:
-// Lingaraj and QA Engineer
-// Correct.
-// Lingaraj
-// QA Engineer
-// 1/1
-// Q4 — undefined ✅
-// Your answer:
-// Tester
-// Correct.
-// Because:
-// role: undefined
-// causes the default value to be used.
-// 1/1
-// Q5 — null ✅
-// Your answer:
-// null
-// Correct. 💯
-// null does not trigger the default value.
-// 1/1
-// Q6 — Concept ✅
-// Your explanation is exactly right:
-// Default values only trigger on undefined, not null.
-// That's the key rule.
-// 1/1
-// Q7 — Automation Scenario ✅
-// Your code:
-// const { username, password, browser = "Chrome" } = testData;
-// console.log(username);
-// console.log(password);
-// console.log(browser);
-// Perfect. 🔥
-// Output:
-// testuser
-// Test@123
-// Chrome
-// This is a realistic test-data pattern.
-// 1/1
-// 🎯 Final Score: 7/7 — 10/10 💯🔥
-// Destructuring progress
-// ✅ Array Destructuring
-// ✅ Object Destructuring
-// ✅ Skipping Array Values
-// ✅ Object Property Renaming
-// ✅ Default Values
-// ✅ undefined vs null
-// ✅ Automation/Test-data usage
-// You're solid on this concept. 💪
-// ➡️ Next Destructuring concept
-// Nested Destructuring — extracting values from arrays/objects that are inside another object or array.
-// We'll keep it one concept at a time as planned.
 
+// // Q2 — Array Default Value ✅
+// // const [first, second, third = "Jenkins"] = tools;
+// // Perfect. 🎯
+// // 1/1
+// // Q3 — Object Default Value ✅
+// // Your answer:
+// // Lingaraj and QA Engineer
+// // Correct.
+// // Lingaraj
+// // QA Engineer
+// // 1/1
+// // Q4 — undefined ✅
+// // Your answer:
+// // Tester
+// // Correct.
+// // Because:
+// // role: undefined
+// // causes the default value to be used.
+// // 1/1
+// // Q5 — null ✅
+// // Your answer:
+// // null
+// // Correct. 💯
+// // null does not trigger the default value.
+// // 1/1
+// // Q6 — Concept ✅
+// // Your explanation is exactly right:
+// // Default values only trigger on undefined, not null.
+// // That's the key rule.
+// // 1/1
+// // Q7 — Automation Scenario ✅
+// // Your code:
+// // const { username, password, browser = "Chrome" } = testData;
+// // console.log(username);
+// // console.log(password);
+// // console.log(browser);
+// // Perfect. 🔥
+// // Output:
+// // testuser
+// // Test@123
+// // Chrome
+// // This is a realistic test-data pattern.
+// // 1/1
+// // 🎯 Final Score: 7/7 — 10/10 💯🔥
+// // Destructuring progress
+// // ✅ Array Destructuring
+// // ✅ Object Destructuring
+// // ✅ Skipping Array Values
+// // ✅ Object Property Renaming
+// // ✅ Default Values
+// // ✅ undefined vs null
+// // ✅ Automation/Test-data usage
+// // You're solid on this concept. 💪
+// // ➡️ Next Destructuring concept
+// // Nested Destructuring — extracting values from arrays/objects that are inside another object or array.
+// // We'll keep it one concept at a time as planned.
 
-//--------------------------------------------------------------------------------------------------------------------------------------------
 
+// //--------------------------------------------------------------------------------------------------------------------------------------------
 
-// Chalooo macha 😎🔥
-// Next concept: Nested Destructuring
-// We're still in:
-// Playwright - learning - 45 - days/
-// └── 01 - JavaScript - Fundamentals/
-//     └── 10 - ES6 - and - OOP/
-//         └── 02 - Destructuring.js
 
-//***********************************************8 */
-// 1️⃣ What is Nested Destructuring?
-//***********************************************8 */
+// // Chalooo macha 😎🔥
+// // Next concept: Nested Destructuring
+// // We're still in:
+// // Playwright - learning - 45 - days/
+// // └── 01 - JavaScript - Fundamentals/
+// //     └── 10 - ES6 - and - OOP/
+// //         └── 02 - Destructuring.js
 
-// Sometimes an object contains another object:
-// const employee = {
-//     name: "Lingaraj",
-//     job: {
-//         role: "QA Engineer",
-//         experience: 4
-//     }
-// };
+// //***********************************************8 */
+// // 1️⃣ What is Nested Destructuring?
+// //***********************************************8 */
 
-// We can extract values from the nested object directly:
+// // Sometimes an object contains another object:
+// // const employee = {
+// //     name: "Lingaraj",
+// //     job: {
+// //         role: "QA Engineer",
+// //         experience: 4
+// //     }
+// // };
 
-// const {
-//     name,
-//     job: { role, experience }
-// } = employee;
+// // We can extract values from the nested object directly:
 
-// console.log(name);
-// console.log(role);
-// console.log(experience);
+// // const {
+// //     name,
+// //     job: { role, experience }
+// // } = employee;
 
-// Output:
+// // console.log(name);
+// // console.log(role);
+// // console.log(experience);
 
-// Lingaraj
-// QA Engineer
-// 4
+// // Output:
 
-// Instead of doing:
+// // Lingaraj
+// // QA Engineer
+// // 4
 
-// const role = employee.job.role;
-// const experience = employee.job.experience;
-// 2️⃣ Nested Array Destructuring
+// // Instead of doing:
 
-// Arrays can also contain arrays:
+// // const role = employee.job.role;
+// // const experience = employee.job.experience;
+// // 2️⃣ Nested Array Destructuring
 
-// const browsers = [
-//     "Chrome",
-//     ["Firefox", "Edge"]
-// ];
+// // Arrays can also contain arrays:
 
-// const [first, [second, third]] = browsers;
+// // const browsers = [
+// //     "Chrome",
+// //     ["Firefox", "Edge"]
+// // ];
 
-// console.log(first);
-// console.log(second);
-// console.log(third);
+// // const [first, [second, third]] = browsers;
 
-// Output:
+// // console.log(first);
+// // console.log(second);
+// // console.log(third);
 
-// Chrome
-// Firefox
-// Edge
+// // Output:
 
-// The structure matters:
+// // Chrome
+// // Firefox
+// // Edge
 
-// browsers
-// │
-// ├── Chrome
-// │
-// └── nested array
-//     ├── Firefox
-//     └── Edge
+// // The structure matters:
 
-// So our destructuring structure matches the data structure:
+// // browsers
+// // │
+// // ├── Chrome
+// // │
+// // └── nested array
+// //     ├── Firefox
+// //     └── Edge
 
-// const [first, [second, third]] = browsers;
-// 3️⃣ QA / Automation Example
+// // So our destructuring structure matches the data structure:
 
-// This is useful when test data is nested:
+// // const [first, [second, third]] = browsers;
+// // 3️⃣ QA / Automation Example
 
-// const testData = {
-//     user: {
-//         username: "testuser",
-//         password: "Test@123"
-//     },
-//     browser: "Chrome"
-// };
+// // This is useful when test data is nested:
 
-// We can extract everything:
+// // const testData = {
+// //     user: {
+// //         username: "testuser",
+// //         password: "Test@123"
+// //     },
+// //     browser: "Chrome"
+// // };
 
-// const {
-//     user: { username, password },
-//     browser
-// } = testData;
+// // We can extract everything:
 
-// console.log(username);
-// console.log(password);
-// console.log(browser);
+// // const {
+// //     user: { username, password },
+// //     browser
+// // } = testData;
 
-// Output:
+// // console.log(username);
+// // console.log(password);
+// // console.log(browser);
 
-// testuser
-// Test@123
-// Chrome
+// // Output:
 
-// This pattern can be useful when working with nested test-data objects or API response data.
+// // testuser
+// // Test@123
+// // Chrome
 
-// ⚠️ Important Rule
+// // This pattern can be useful when working with nested test-data objects or API response data.
 
-// The destructuring pattern should match the structure of the data.
+// // ⚠️ Important Rule
 
-// For:
+// // The destructuring pattern should match the structure of the data.
 
-// const user = {
-//     details: {
-//         name: "Lingaraj"
-//     }
-// };
+// // For:
 
-// Correct:
+// // const user = {
+// //     details: {
+// //         name: "Lingaraj"
+// //     }
+// // };
 
-// const {
-//     details: { name }
-// } = user;
+// // Correct:
 
-// Not:
+// // const {
+// //     details: { name }
+// // } = user;
 
-// const { name } = user;
+// // Not:
 
-// because name is not directly inside user; it is inside details.
+// // const { name } = user;
 
-// 📝 Practice — Nested Destructuring
-// Q1 — Nested Object
-// const employee = {
-//     name: "Lingaraj",
-//     details: {
-//         role: "QA Engineer",
-//         experience: 4
-//     }
-// };
-// Use nested destructuring to extract:
-// name
-// role
-// experience
+// // because name is not directly inside user; it is inside details.
 
-//Q1 answer :
-// const employee = {
-//     name: "Lingaraj",
-//     details: {
-//         role: "QA Engineer",
-//         experience: 4
-//     }
-// };
-// const { name, details: { role, experience } } = employee;
-// console.log(name);
-// console.log(role);
-// console.log(experience);
+// // 📝 Practice — Nested Destructuring
+// // Q1 — Nested Object
+// // const employee = {
+// //     name: "Lingaraj",
+// //     details: {
+// //         role: "QA Engineer",
+// //         experience: 4
+// //     }
+// // };
+// // Use nested destructuring to extract:
+// // name
+// // role
+// // experience
 
-// Q2 — Output Prediction
-// const user = {
-//     account: {
-//         username: "testuser",
-//         password: "Test@123"
-//     }
-// };
-// const {
-//     account: { username, password }
-// } = user;
-// console.log(username);
-// console.log(password);
-// What is the output?
+// //Q1 answer :
+// // const employee = {
+// //     name: "Lingaraj",
+// //     details: {
+// //         role: "QA Engineer",
+// //         experience: 4
+// //     }
+// // };
+// // const { name, details: { role, experience } } = employee;
+// // console.log(name);
+// // console.log(role);
+// // console.log(experience);
 
-//Q2 Answer : testuser and Test@123
+// // Q2 — Output Prediction
+// // const user = {
+// //     account: {
+// //         username: "testuser",
+// //         password: "Test@123"
+// //     }
+// // };
+// // const {
+// //     account: { username, password }
+// // } = user;
+// // console.log(username);
+// // console.log(password);
+// // What is the output?
 
+// //Q2 Answer : testuser and Test@123
 
-// Q3 — Nested Array
-// const data = [
-//     "Playwright",
-//     ["Postman", "Jenkins"]
-// ];
 
-// Use nested array destructuring to extract:
+// // Q3 — Nested Array
+// // const data = [
+// //     "Playwright",
+// //     ["Postman", "Jenkins"]
+// // ];
 
-// tool1 → Playwright
-// tool2 → Postman
-// tool3 → Jenkins
+// // Use nested array destructuring to extract:
 
-//Q3 Answer :
-// const [tool1, [tool2, tool3]] = data;
-// console.log(tool1);
-// console.log(tool2);
-// console.log(tool3);
+// // tool1 → Playwright
+// // tool2 → Postman
+// // tool3 → Jenkins
 
+// //Q3 Answer :
+// // const [tool1, [tool2, tool3]] = data;
+// // console.log(tool1);
+// // console.log(tool2);
+// // console.log(tool3);
 
-// Q4 — Output Prediction
-// const browsers = [
-//     ["Chrome", "Firefox"],
-//     "Edge"
-// ];
-// const [[first, second], third] = browsers;
-// console.log(first);
-// console.log(second);
-// console.log(third);
-// What is the output?
 
-//Q4 Answer : Chrome Firefox Edge
+// // Q4 — Output Prediction
+// // const browsers = [
+// //     ["Chrome", "Firefox"],
+// //     "Edge"
+// // ];
+// // const [[first, second], third] = browsers;
+// // console.log(first);
+// // console.log(second);
+// // console.log(third);
+// // What is the output?
 
-// Q5 — Identify the Problem
-// const employee = {
-//     details: {
-//         name: "Lingaraj",
-//         role: "QA"
-//     }
-// };
-// const { name, role } = employee;
-// Why won't this extract name and role?
+// //Q4 Answer : Chrome Firefox Edge
 
-//we have Nested Destructuring is wrong here.
+// // Q5 — Identify the Problem
+// // const employee = {
+// //     details: {
+// //         name: "Lingaraj",
+// //         role: "QA"
+// //     }
+// // };
+// // const { name, role } = employee;
+// // Why won't this extract name and role?
 
+// //we have Nested Destructuring is wrong here.
 
-// Q6 — Automation Scenario
-// Given:
 
-// const testData = {
-//     login: {
-//         username: "testuser",
-//         password: "Test@123"
-//     },
-//     environment: {
-//         browser: "Chrome",
-//         url: "https://example.com"
-//     }
-// };
-// Use nested destructuring to extract:
-// username
-// password
-// browser
-// url
+// // Q6 — Automation Scenario
+// // Given:
 
-//Q6 answer ": progam
+// // const testData = {
+// //     login: {
+// //         username: "testuser",
+// //         password: "Test@123"
+// //     },
+// //     environment: {
+// //         browser: "Chrome",
+// //         url: "https://example.com"
+// //     }
+// // };
+// // Use nested destructuring to extract:
+// // username
+// // password
+// // browser
+// // url
 
-// const testData = {
-//     login: {
-//         username: "testuser",
-//         password: "Test@123"
-//     },
-//     environment: {
-//         browser: "Chrome",
-//         url: "https://example.com"
-//     }
-// };
+// //Q6 answer ": progam
 
-// const {
-//     login: { username, password },
-//     environment: { browser, url }
-// } = testData;
+// // const testData = {
+// //     login: {
+// //         username: "testuser",
+// //         password: "Test@123"
+// //     },
+// //     environment: {
+// //         browser: "Chrome",
+// //         url: "https://example.com"
+// //     }
+// // };
 
-// console.log(username);
-// console.log(password);
-// console.log(browser);
+// // const {
+// //     login: { username, password },
+// //     environment: { browser, url }
+// // } = testData;
+
+// // console.log(username);
+// // console.log(password);
+// // console.log(browser);
+// // // console.log(url);
+
+// // Macha 🔥 very good! You clearly understood nested destructuring. Let's evaluate each one.
+
+// // 🏆 Nested Destructuring Evaluation
+// // Q1 — Nested Object ✅
+
+// // Your code:
+
+// // const { name, details: { role, experience } } = employee;
+
+// // console.log(name);
+// // console.log(role);
+// // console.log(experience);
+
+// // Perfect. 🎯
+
+// // You correctly matched:
+
+// // employee
+// // ├── name
+// // └── details
+// //     ├── role
+// //     └── experience
+
+// // Score: 1/1
+
+// // Q2 — Nested Object Output ✅
+
+// // Your answer:
+
+// // testuser and Test@123
+
+// // Correct.
+
+// // Actual output:
+
+// // testuser
+// // Test@123
+
+// // Score: 1/1
+
+// // Q3 — Nested Array ✅
+
+// // Your code:
+
+// // const [tool1, [tool2, tool3]] = data;
+
+// // console.log(tool1);
+// // console.log(tool2);
+// // console.log(tool3);
+
+// // Exactly correct. 💯
+
+// // The structure:
+
+// // data
+// // ├── Playwright
+// // └── [Postman, Jenkins]
+
+// // matches:
+
+// // [tool1, [tool2, tool3]]
+
+// // Score: 1/1
+
+// // Q4 — Nested Array Output ✅
+
+// // Your answer:
+
+// // Chrome Firefox Edge
+
+// // Correct. 🎯
+
+// // Actual output:
+
+// // Chrome
+// // Firefox
+// // Edge
+
+// // Score: 1/1
+
+// // Q5 — Identify the Problem ⚠️
+
+// // Your answer:
+
+// // we have Nested Destructuring is wrong here.
+
+// // You identified that nested destructuring is required, but the explanation needs a little more detail.
+
+// // The problem is:
+
+// // const { name, role } = employee;
+
+// // name and role are not directly inside employee.
+
+// // The structure is:
+
+// // employee
+// // └── details
+// //     ├── name
+// //     └── role
+
+// // Therefore, we need:
+
+// // const {
+// //     details: { name, role }
+// // } = employee;
+
+// // So your concept was right, but the explanation was incomplete.
+
+// // Score: 0.75/1
+
+// // Q6 — Automation Scenario ✅🔥
+
+// // Your code:
+
+// // const {
+// //     login: { username, password },
+// //     environment: { browser, url }
+// // } = testData;
+
+// // console.log(username);
+// // console.log(password);
+// // console.log(browser);
 // // console.log(url);
 
-// Macha 🔥 very good! You clearly understood nested destructuring. Let's evaluate each one.
+// // Excellent. 💯
 
-// 🏆 Nested Destructuring Evaluation
-// Q1 — Nested Object ✅
+// // You correctly extracted values from two different nested objects.
+
+// // Output:
+
+// // testuser
+// // Test@123
+// // Chrome
+// // https://example.com
+
+// // This is exactly the kind of structure you can encounter with nested API/test-data objects.
+
+// // Score: 1/1
+
+// // 🎯 Final Score
+// // Question	Score
+// // Q1	1/1
+// // Q2	1/1
+// // Q3	1/1
+// // Q4	1/1
+// // Q5	0.75/1
+// // Q6	1/1
+// // Total	5.75/6
+// // ⭐ Score: 9.6/10 — 96%
+
+// // Only Q5 needed a more complete explanation. Your actual code understanding is strong.
+
+// // 🧠 Key takeaway
+
+// // Always look at the data structure first, then make your destructuring pattern match it.
+
+// // const employee = {
+// //     details: {
+// //         name: "Lingaraj"
+// //     }
+// // };
+
+// // Therefore:
+
+// // const {
+// //     details: { name }
+// // } = employee;
+
+// // Think:
+
+// // Destructuring pattern should mirror the structure of the data. 🔥
+
+// // ✅ Nested Destructuring: COMPLETE
+
+// // So far in Destructuring:
+
+// // ✅ Array Destructuring
+// // ✅ Object Destructuring
+// // ✅ Skipping values
+// // ✅ Renaming
+// // ✅ Default Values
+// // ✅ Nested Destructuring
+
+// // Next we'll continue with the next Destructuring concept from the learning sequence, one concept at a time.
+
+// ///-----------------------------------------------------------------------------------------------------------------------
+
+// // Chalooo macha 😎🔥 Nested Destructuring complete.
+
+// // ➡️ Next concept: Destructuring with Function Parameters
+
+// // This is an important one for automation because functions often receive objects as arguments.
+
+// // Example
+
+// // Without destructuring:
+
+// // function loginUser(user) {
+// //     console.log(user.username);
+// //     console.log(user.password);
+// // }
+
+// // const testData = {
+// //     username: "testuser",
+// //     password: "Test@123"
+// // };
+
+// // loginUser(testData);
+
+// // With destructuring directly in the function parameter:
+
+// // function loginUser({ username, password }) {
+// //     console.log(username);
+// //     console.log(password);
+// // }
+
+// // const testData = {
+// //     username: "testuser",
+// //     password: "Test@123"
+// // };
+
+// // loginUser(testData);
+
+// // The important part is:
+
+// // function loginUser({ username, password }) {
+
+// // Instead of receiving the whole object as user, the function directly extracts the required properties.
+
+// // Array parameter example
+// // function printBrowser([first, second]) {
+// //     console.log(first);
+// //     console.log(second);
+// // }
+
+// // const browsers = ["Chrome", "Firefox"];
+
+// // printBrowser(browsers);
+
+// // Output:
+
+// // Chrome
+// // Firefox
+// // 🧠 Remember
+// // function test({ name, role }) {
+
+// // → Object destructuring in parameter
+
+// // function test([first, second]) {
+
+// // → Array destructuring in parameter
+
+// // 📝 Practice
+// // Q1
+
+// // Convert this function to use object destructuring in the parameter:
+
+// // function loginUser(user) {
+// //     console.log(user.username);
+// //     console.log(user.password);
+// // }
+
+// // It should directly receive:
+
+// // username
+// // password
+
+// //Q1 answer :
+// // function loginUser(username, password) {
+// //     console.log(username);
+// //     console.log(password);
+// // }
+
+
+// // Q2 — Output
+// // function printUser({ name, role }) {
+// //     console.log(name);
+// //     console.log(role);
+// // }
+// // printUser({
+// //     name: "Lingaraj",
+// //     role: "QA"
+// // });
+// // What is the output?
+
+// //Q2 answer : Lingaraj and QA
+
+// // Q3
+// // Write a function:
+// // printBrowser()
+// // that receives:
+// // ["Chrome", "Firefox"]
+// // using array destructuring in the function parameter, and prints both browsers.
+
+// //Q3 answer :
+
+// // const browsers = ["Chrome", "Firefox"];
+// // function printBrowser([browers1, browers2]) {
+// //     console.log(browers1);
+// //     console.log(browers2);
+// // }
+// // printBrowser(browsers);
+
+
+
+// // Q4 — Practical Automation
+// // Given:
+// // const testData = {
+// //     username: "testuser",
+// //     password: "Test@123",
+// //     browser: "Chrome"
+// // };
+// // Create a function:
+// // runTest()
+// // that uses object destructuring directly in its parameter and prints all three values.
+
+// //Q4 answer :
+
+// // const testData = {
+// //     username: "testuser",
+// //     password: "Test@123",
+// //     browser: "Chrome"
+// // };
+
+// // function runTest({ username, password, browser }) {
+// //     console.log(username);
+// //     console.log(password);
+// //     console.log(browser);
+// // }
+
+// // runTest(testData);
+
+
+// // Q5 — Concept
+// // What is the advantage of doing this:
+// // function login({ username, password }) {
+// // instead of:
+// // function login(user) {
+// //     console.log(user.username);
+// //     console.log(user.password);
+// // }
+
+// // time saving and less and clean codig practice, reduce mess between the code
+
+
+// // Macha 🔥 good attempt. Let's evaluate carefully.
+
+// // 🏆 Function Parameter Destructuring — Evaluation
+// // Q1 — Object Destructuring in Parameter ⚠️
+
+// // Your answer:
+
+// // function loginUser(username, password) {
+// //     console.log(username);
+// //     console.log(password);
+// // }
+
+// // This function does receive username and password directly, but it does not use destructuring.
+
+// // The question specifically asked for object destructuring in the parameter.
+
+// // Correct:
+
+// // function loginUser({ username, password }) {
+// //     console.log(username);
+// //     console.log(password);
+// // }
+
+// // Then:
+
+// // loginUser({
+// //     username: "testuser",
+// //     password: "Test@123"
+// // });
+
+// // Your understanding of function parameters is correct; you just missed the object destructuring syntax.
+
+// // Score: 0.5/1
+
+// // Q2 — Output ✅
+
+// // Your answer:
+
+// // Lingaraj and QA
+
+// // Correct. 🎯
+
+// // Actual output:
+
+// // Lingaraj
+// // QA
+
+// // Score: 1/1
+
+// // Q3 — Array Destructuring in Parameter ✅
+
+// // Your code:
+
+// // const browsers = ["Chrome", "Firefox"];
+
+// // function printBrowser([browers1, browers2]) {
+// //     console.log(browers1);
+// //     console.log(browers2);
+// // }
+
+// // printBrowser(browsers);
+
+// // Excellent. 💯
+
+// // You correctly used:
+
+// // function printBrowser([browers1, browers2])
+
+// // That's array destructuring directly in the parameter.
+
+// // Only a harmless naming typo:
+
+// // browers1
+// // browers2
+
+// // instead of:
+
+// // browsers1
+// // browsers2
+
+// // It doesn't affect execution.
+
+// // Score: 1/1
+
+// // Q4 — Automation Scenario ✅🔥
+
+// // Your code:
+
+// // function runTest({ username, password, browser }) {
+// //     console.log(username);
+// //     console.log(password);
+// //     console.log(browser);
+// // }
+
+// // runTest(testData);
+
+// // Perfect.
+
+// // This is exactly what the question asked for.
+
+// // Score: 1/1
+
+// // Q5 — Concept ✅
+
+// // Your answer:
+
+// // time saving and less and clean coding practice, reduce mess between the code
+
+// // Correct idea. 👍
+
+// // More precisely, destructuring:
+
+// // makes the function cleaner
+// // avoids repeatedly writing user.username, user.password
+// // directly communicates which properties the function needs
+
+// // For example:
+
+// // function login({ username, password }) {
+
+// // is more concise than:
+
+// // function login(user) {
+// //     console.log(user.username);
+// //     console.log(user.password);
+// // }
+
+// // Score: 1/1
+
+// // 🎯 Final Score
+// // Question	Score
+// // Q1	0.5/1
+// // Q2	1/1
+// // Q3	1/1
+// // Q4	1/1
+// // Q5	1/1
+// // Total	4.5/5
+// // ⭐ Score: 9/10 — 90%
+
+// // Only Q1 needs correction.
+
+// // 🔑 Most important thing to remember
+
+// // These are not the same:
+
+// // function loginUser(username, password) {
+// // }
+
+// // ⬆️ Normal parameters
+
+// // vs.
+
+// // function loginUser({ username, password }) {
+// // }
+
+// // ⬆️ Object destructuring in the parameter
+
+// // And:
+
+// // function printBrowser([browser1, browser2]) {
+// // }
+
+// // ⬆️ Array destructuring in the parameter
+
+// // You've now covered another important part of Destructuring. 🔥
+
+// ///-------------------------------------------------------------------------------------------------------------------------///
+
+
+// // Perfect macha 😎🔥
+
+// //********************************************************* */
+// // Next Destructuring concept: Rest Element with Destructuring
+// //********************************************************* */
+
+// // But first, one important distinction:
+
+// // We are learning Rest with Destructuring, not the Spread Operator yet. The Spread Operator is a separate roadmap topic and we'll cover it later.
+
+// // 1️⃣ Rest Element in Array Destructuring
+
+// // Suppose we have:
+
+// // const browsers = ["Chrome", "Firefox", "Edge", "Safari"];
+
+// // We can extract the first value and collect the remaining values:
+
+// // const [first, ...others] = browsers;
+
+// // // console.log(first);
+// // console.log(others);
+
+// // Output:
+
+// // Chrome
+// // ["Firefox", "Edge", "Safari"]
+
+// // Here:
+
+// // [first, ...others]
+
+// // means:
+
+// // first  → first element
+// // others → all remaining elements
+// // Important ⚠️
+
+// // The rest element must be last.
+
+// // ✅ Correct:
+
+// // const [first, ...others] = browsers;
+
+// // ❌ Incorrect:
+
+// // const [...others, last] = browsers;
+// // 2️⃣ Rest Element with Object Destructuring
+
+// // Suppose:
+
+// // const employee = {
+// //     name: "Lingaraj",
+// //     role: "QA Engineer",
+// //     experience: 4,
+// //     location: "Bangalore"
+// // };
+
+// // We can extract specific properties and collect the remaining properties:
+
+// // const { name, ...details } = employee;
+
+// // console.log(name);
+// // console.log(details);
+
+// // Output:
+
+// // Lingaraj
+// // {
+// //     role: "QA Engineer",
+// //         experience: 4,
+// //             location: "Bangalore"
+// // }
+
+// // So:
+
+// // const { name, ...details } = employee;
+
+// // means:
+
+// // name    → extracted separately
+// // details → remaining properties
+// // 3️⃣ QA / Automation Example
+
+// // Imagine test data:
+
+// // const testData = {
+// //     username: "testuser",
+// //     password: "Test@123",
+// //     browser: "Chrome",
+// //     environment: "QA",
+// //     timeout: 30000
+// // };
+
+// // You only want username separately and everything else together:
+
+// // const { username, ...config } = testData;
+
+// // console.log(username);
+// // console.log(config);
+
+// // Output:
+
+// // testuser
+// // {
+// //     password: "Test@123",
+// //         browser: "Chrome",
+// //             environment: "QA",
+// //                 timeout: 30000
+// // }
+
+// // This can be useful when working with larger test - data / configuration objects.
+
+// // 🧠 Remember
+// // Array
+// // const [first, ...remaining] = array;
+
+// // ➡️ remaining gets all remaining array elements.
+
+// //     Object
+// // const { name, ...remaining } = object;
+
+// // ➡️ remaining gets all remaining object properties.
+
+// // Golden rule 🔥
+
+// // Rest collects the remaining values / properties.
+
+// //     And:
+
+// // Rest must be at the end.
+
+// // 📝 Practice
+// // Q1 — Array Rest
+// // const tools = ["Playwright", "Postman", "Jenkins", "Git"];
+// // Use destructuring to extract:
+// // firstTool → Playwright
+// // remainingTools → Postman, Jenkins, Git
+
+
+// //Q1 Answer :
+// // const tools = ["Playwright", "Postman", "Jenkins", "Git"];
+// // const [tool1, ...remainingtools] = tools;
+// // console.log(tool1);
+// // console.log(remainingtools);
+
+// // Q2 — Output Prediction
+// // const browsers = ["Chrome", "Firefox", "Edge"];
+// // const [first, ...others] = browsers;
+// // console.log(first);
+// // console.log(others);
+// // What is the output ?
+
+// //Q2 Answer : Chrome and   ["Firefox", "Edge"]
+
+// //Q3 — Object Rest
+// // const employee = {
+// //     name: "Lingaraj",
+// //     role: "QA Engineer",
+// //     experience: 4,
+// //     location: "Bangalore"
+// // };
+// // Extract name separately and collect all remaining properties into details.
+
+// //Q3 Answer :
+// // const employee = {
+// //     name: "Lingaraj",
+// //     role: "QA Engineer",
+// //     experience: 4,
+// //     location: "Bangalore"
+// // };
+// // const { name, ...details } = employee;
+// // console.log(name);
+// // console.log(details);
+
+// // Q4 — Output Prediction
+// // const user = {
+// //     username: "testuser",
+// //     role: "admin",
+// //     browser: "Chrome"
+// // };
+// // const { username, ...otherDetails } = user;
+// // console.log(username);
+// // console.log(otherDetails);
+// // What is the output ?
+
+// //Q4 Answer : testuser and {role: 'admin', browser: 'Chrome'}
+
+
+// //Q5 — Identify the Problem
+// // What's wrong with this?
+// // const tools = ["Playwright", "Postman", "Jenkins"];
+// // const [...remaining, last] = tools;
+
+// //Q5 answer : object destructuring is worng beacuse, ...remaining comes at the end.
+
+
+// // Q6 — Automation Scenario
+// // Given:
+// // const testData = {
+// //     username: "testuser",
+// //     password: "Test@123",
+// //     browser: "Chrome",
+// //     environment: "QA"
+// // };
+// // Extract username separately and store everything else inside:
+// // config
+// // Write the code.
+
+// //Q6 Answer :
+
+// const testData = {
+//     username: "testuser",
+//     password: "Test@123",
+//     browser: "Chrome",
+//     environment: "QA"
+// };
+
+// const { username, ...config } = testData;
+// console.log(username);
+// console.log(config);
+
+
+// Chalooo macha 🔥 Let's check all 6 carefully.
+
+// 🏆 Rest Element Practice Evaluation
+// Q1 — Array Rest ✅
 
 // Your code:
 
-// const { name, details: { role, experience } } = employee;
-
-// console.log(name);
-// console.log(role);
-// console.log(experience);
-
-// Perfect. 🎯
-
-// You correctly matched:
-
-// employee
-// ├── name
-// └── details
-//     ├── role
-//     └── experience
-
-// Score: 1/1
-
-// Q2 — Nested Object Output ✅
-
-// Your answer:
-
-// testuser and Test@123
-
-// Correct.
-
-// Actual output:
-
-// testuser
-// Test@123
-
-// Score: 1/1
-
-// Q3 — Nested Array ✅
-
-// Your code:
-
-// const [tool1, [tool2, tool3]] = data;
+// const [tool1, ...remainingtools] = tools;
 
 // console.log(tool1);
-// console.log(tool2);
-// console.log(tool3);
+// console.log(remainingtools);
 
-// Exactly correct. 💯
+// Correct. 🎯
 
-// The structure:
+// Output:
 
-// data
-// ├── Playwright
-// └── [Postman, Jenkins]
+// Playwright
+// ["Postman", "Jenkins", "Git"]
 
-// matches:
-
-// [tool1, [tool2, tool3]]
+// Variable naming is fine.
 
 // Score: 1/1
 
-// Q4 — Nested Array Output ✅
+// Q2 — Output Prediction ✅
 
 // Your answer:
 
-// Chrome Firefox Edge
+// Chrome and ["Firefox", "Edge"]
 
 // Correct. 🎯
 
 // Actual output:
 
 // Chrome
-// Firefox
-// Edge
+// ["Firefox", "Edge"]
+
+// Score: 1/1
+
+// Q3 — Object Rest ✅
+
+// Your code:
+
+// const { name, ...details } = employee;
+
+// console.log(name);
+// console.log(details);
+
+// Perfect. 💯
+
+// details contains:
+
+// {
+//     role: "QA Engineer",
+//     experience: 4,
+//     location: "Bangalore"
+// }
+
+// Score: 1/1
+
+// Q4 — Output Prediction ✅
+
+// Your answer:
+
+// testuser and {role: 'admin', browser: 'Chrome'}
+
+// Correct. 🎯
+
+// Actual output conceptually:
+
+// testuser
+// { role: "admin", browser: "Chrome" }
 
 // Score: 1/1
 
@@ -1205,30 +1939,27 @@
 
 // Your answer:
 
-// we have Nested Destructuring is wrong here.
+// object destructuring is wrong because ...remaining comes at the end.
 
-// You identified that nested destructuring is required, but the explanation needs a little more detail.
+// You got the important rule correct: ...remaining must be at the end. 👍
 
-// The problem is:
+// But this is not object destructuring.
 
-// const { name, role } = employee;
+// The code is:
 
-// name and role are not directly inside employee.
+// const [...remaining, last] = tools;
 
-// The structure is:
+// The syntax uses [], so it is array destructuring.
 
-// employee
-// └── details
-//     ├── name
-//     └── role
+// The actual problem is:
 
-// Therefore, we need:
+// ...remaining
 
-// const {
-//     details: { name, role }
-// } = employee;
+// is a rest element, and a rest element must be the last element in the destructuring pattern.
 
-// So your concept was right, but the explanation was incomplete.
+// Correct:
+
+// const [first, ...remaining] = tools;
 
 // Score: 0.75/1
 
@@ -1236,28 +1967,23 @@
 
 // Your code:
 
-// const {
-//     login: { username, password },
-//     environment: { browser, url }
-// } = testData;
+// const { username, ...config } = testData;
 
 // console.log(username);
-// console.log(password);
-// console.log(browser);
-// console.log(url);
+// console.log(config);
 
-// Excellent. 💯
-
-// You correctly extracted values from two different nested objects.
+// Perfect.
 
 // Output:
 
 // testuser
-// Test@123
-// Chrome
-// https://example.com
+// {
+//     password: "Test@123",
+//     browser: "Chrome",
+//     environment: "QA"
+// }
 
-// This is exactly the kind of structure you can encounter with nested API/test-data objects.
+// This is a very useful pattern for test-data/configuration handling.
 
 // Score: 1/1
 
@@ -1270,374 +1996,26 @@
 // Q5	0.75/1
 // Q6	1/1
 // Total	5.75/6
-// ⭐ Score: 9.6/10 — 96%
+// ⭐ 9.6/10 — 96%
 
-// Only Q5 needed a more complete explanation. Your actual code understanding is strong.
+// Only Q5 needed a small conceptual correction.
 
-// 🧠 Key takeaway
+// 🔑 Remember this distinction
+// const [first, ...remaining] = array;
 
-// Always look at the data structure first, then make your destructuring pattern match it.
+// ➡️ Array destructuring + rest
 
-// const employee = {
-//     details: {
-//         name: "Lingaraj"
-//     }
-// };
+// const { name, ...details } = object;
 
-// Therefore:
+// ➡️ Object destructuring + rest
 
-// const {
-//     details: { name }
-// } = employee;
+// And in both cases:
 
-// Think:
+// Rest must always be last. 🔥
 
-// Destructuring pattern should mirror the structure of the data. 🔥
+// ✅ Rest Element: COMPLETE
 
-// ✅ Nested Destructuring: COMPLETE
+// Your Destructuring topic is now well covered based on what we've practiced.
 
-// So far in Destructuring:
+// The roadmap's next related area is Spread/Rest, followed by Modules Preview, Classes, Constructors, Inheritance, and Encapsulation under Day 9.
 
-// ✅ Array Destructuring
-// ✅ Object Destructuring
-// ✅ Skipping values
-// ✅ Renaming
-// ✅ Default Values
-// ✅ Nested Destructuring
-
-// Next we'll continue with the next Destructuring concept from the learning sequence, one concept at a time.
-
-///-----------------------------------------------------------------------------------------------------------------------
-
-// Chalooo macha 😎🔥 Nested Destructuring complete.
-
-// ➡️ Next concept: Destructuring with Function Parameters
-
-// This is an important one for automation because functions often receive objects as arguments.
-
-// Example
-
-// Without destructuring:
-
-// function loginUser(user) {
-//     console.log(user.username);
-//     console.log(user.password);
-// }
-
-// const testData = {
-//     username: "testuser",
-//     password: "Test@123"
-// };
-
-// loginUser(testData);
-
-// With destructuring directly in the function parameter:
-
-// function loginUser({ username, password }) {
-//     console.log(username);
-//     console.log(password);
-// }
-
-// const testData = {
-//     username: "testuser",
-//     password: "Test@123"
-// };
-
-// loginUser(testData);
-
-// The important part is:
-
-// function loginUser({ username, password }) {
-
-// Instead of receiving the whole object as user, the function directly extracts the required properties.
-
-// Array parameter example
-// function printBrowser([first, second]) {
-//     console.log(first);
-//     console.log(second);
-// }
-
-// const browsers = ["Chrome", "Firefox"];
-
-// printBrowser(browsers);
-
-// Output:
-
-// Chrome
-// Firefox
-// 🧠 Remember
-// function test({ name, role }) {
-
-// → Object destructuring in parameter
-
-// function test([first, second]) {
-
-// → Array destructuring in parameter
-
-// 📝 Practice
-// Q1
-
-// Convert this function to use object destructuring in the parameter:
-
-// function loginUser(user) {
-//     console.log(user.username);
-//     console.log(user.password);
-// }
-
-// It should directly receive:
-
-// username
-// password
-
-//Q1 answer :
-// function loginUser(username, password) {
-//     console.log(username);
-//     console.log(password);
-// }
-
-
-// Q2 — Output
-// function printUser({ name, role }) {
-//     console.log(name);
-//     console.log(role);
-// }
-// printUser({
-//     name: "Lingaraj",
-//     role: "QA"
-// });
-// What is the output?
-
-//Q2 answer : Lingaraj and QA
-
-// Q3
-// Write a function:
-// printBrowser()
-// that receives:
-// ["Chrome", "Firefox"]
-// using array destructuring in the function parameter, and prints both browsers.
-
-//Q3 answer :
-
-// const browsers = ["Chrome", "Firefox"];
-// function printBrowser([browers1, browers2]) {
-//     console.log(browers1);
-//     console.log(browers2);
-// }
-// printBrowser(browsers);
-
-
-
-// Q4 — Practical Automation
-// Given:
-// const testData = {
-//     username: "testuser",
-//     password: "Test@123",
-//     browser: "Chrome"
-// };
-// Create a function:
-// runTest()
-// that uses object destructuring directly in its parameter and prints all three values.
-
-//Q4 answer :
-
-const testData = {
-    username: "testuser",
-    password: "Test@123",
-    browser: "Chrome"
-};
-
-function runTest({ username, password, browser }) {
-    console.log(username);
-    console.log(password);
-    console.log(browser);
-}
-
-runTest(testData);
-
-
-// Q5 — Concept
-// What is the advantage of doing this:
-// function login({ username, password }) {
-// instead of:
-// function login(user) {
-//     console.log(user.username);
-//     console.log(user.password);
-// }
-
-// time saving and less and clean codig practice, reduce mess between the code
-
-
-// Macha 🔥 good attempt. Let's evaluate carefully.
-
-// 🏆 Function Parameter Destructuring — Evaluation
-// Q1 — Object Destructuring in Parameter ⚠️
-
-// Your answer:
-
-// function loginUser(username, password) {
-//     console.log(username);
-//     console.log(password);
-// }
-
-// This function does receive username and password directly, but it does not use destructuring.
-
-// The question specifically asked for object destructuring in the parameter.
-
-// Correct:
-
-// function loginUser({ username, password }) {
-//     console.log(username);
-//     console.log(password);
-// }
-
-// Then:
-
-// loginUser({
-//     username: "testuser",
-//     password: "Test@123"
-// });
-
-// Your understanding of function parameters is correct; you just missed the object destructuring syntax.
-
-// Score: 0.5/1
-
-// Q2 — Output ✅
-
-// Your answer:
-
-// Lingaraj and QA
-
-// Correct. 🎯
-
-// Actual output:
-
-// Lingaraj
-// QA
-
-// Score: 1/1
-
-// Q3 — Array Destructuring in Parameter ✅
-
-// Your code:
-
-// const browsers = ["Chrome", "Firefox"];
-
-// function printBrowser([browers1, browers2]) {
-//     console.log(browers1);
-//     console.log(browers2);
-// }
-
-// printBrowser(browsers);
-
-// Excellent. 💯
-
-// You correctly used:
-
-// function printBrowser([browers1, browers2])
-
-// That's array destructuring directly in the parameter.
-
-// Only a harmless naming typo:
-
-// browers1
-// browers2
-
-// instead of:
-
-// browsers1
-// browsers2
-
-// It doesn't affect execution.
-
-// Score: 1/1
-
-// Q4 — Automation Scenario ✅🔥
-
-// Your code:
-
-// function runTest({ username, password, browser }) {
-//     console.log(username);
-//     console.log(password);
-//     console.log(browser);
-// }
-
-// runTest(testData);
-
-// Perfect.
-
-// This is exactly what the question asked for.
-
-// Score: 1/1
-
-// Q5 — Concept ✅
-
-// Your answer:
-
-// time saving and less and clean coding practice, reduce mess between the code
-
-// Correct idea. 👍
-
-// More precisely, destructuring:
-
-// makes the function cleaner
-// avoids repeatedly writing user.username, user.password
-// directly communicates which properties the function needs
-
-// For example:
-
-// function login({ username, password }) {
-
-// is more concise than:
-
-// function login(user) {
-//     console.log(user.username);
-//     console.log(user.password);
-// }
-
-// Score: 1/1
-
-// 🎯 Final Score
-// Question	Score
-// Q1	0.5/1
-// Q2	1/1
-// Q3	1/1
-// Q4	1/1
-// Q5	1/1
-// Total	4.5/5
-// ⭐ Score: 9/10 — 90%
-
-// Only Q1 needs correction.
-
-// 🔑 Most important thing to remember
-
-// These are not the same:
-
-// function loginUser(username, password) {
-// }
-
-// ⬆️ Normal parameters
-
-// vs.
-
-// function loginUser({ username, password }) {
-// }
-
-// ⬆️ Object destructuring in the parameter
-
-// And:
-
-// function printBrowser([browser1, browser2]) {
-// }
-
-// ⬆️ Array destructuring in the parameter
-
-// You've now covered another important part of Destructuring. 🔥
-
-
-dummy
-// ⬆️ Object destructuring in the parameter
-
-// And:
-
-// function printBrowser([browser1, browser2]) {
-// }
