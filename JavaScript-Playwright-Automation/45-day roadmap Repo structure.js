@@ -16,11 +16,11 @@
 // │   ├── 08 - Objects /: Status : Completed ✅
 // │   ├── 09 - Strings - and - Dates //: Status : Completed ✅
 // │   ├── 10 - ES6 - and - OOP /: Status : Completed ✅
-// │   ├── 11 - Async - JavaScript /🔄 IN PROGRESS
-// │   ├── 12 - JSON /
-// │   └── 13 - Error - Handling /
+// │   ├── 11 - Async - JavaScript /: Status : Completed ✅
+// │   ├── 12 - JSON /: Status : Completed ✅
+// │   └── 13 - Error - Handling /: Status : Completed ✅
 // │
-// ├── 02 - NodeJS - and - NPM /
+// ├── 02 - NodeJS - and - NPM / /🔄 IN PROGRESS
 // │   │
 // │   ├── 01 - NodeJS /
 // │   ├── 02 - NPM /
