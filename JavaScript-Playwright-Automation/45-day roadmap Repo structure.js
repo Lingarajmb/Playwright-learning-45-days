@@ -20,9 +20,9 @@
 // │   ├── 12 - JSON /: Status : Completed ✅
 // │   └── 13 - Error - Handling /: Status : Completed ✅
 // │
-// ├── 02 - NodeJS - and - NPM / /🔄 IN PROGRESS
+// ├── 02 - NodeJS - and - NPM /
 // │   │
-// │   ├── 01 - NodeJS /
+// │   ├── 01 - NodeJS //🔄 IN PROGRESS
 // │   ├── 02 - NPM /
 // │   ├── 03 - package - json /
 // │   ├── 04 - NPM - Scripts /
