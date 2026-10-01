@@ -22,9 +22,9 @@
 // │
 // ├── 02 - NodeJS - and - NPM /
 // │   │
-// │   ├── 01 - NodeJS //🔄 IN PROGRESS
-// │   ├── 02 - NPM /
-// │   ├── 03 - package - json /
+// │   ├── 01 - NodeJS //: Status : Completed ✅
+// │   ├── 02 - NPM //: Status : Completed ✅
+// │   ├── 03 - package - json //🔄 IN PROGRESS
 // │   ├── 04 - NPM - Scripts /
 // │   ├── 05 - Modules /
 // │   ├── 06 - File - System /
