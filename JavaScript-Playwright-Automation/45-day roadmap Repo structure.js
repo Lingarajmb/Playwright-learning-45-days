@@ -24,8 +24,8 @@
 // │   │
 // │   ├── 01 - NodeJS //: Status : Completed ✅
 // │   ├── 02 - NPM //: Status : Completed ✅
-// │   ├── 03 - package - json //🔄 IN PROGRESS
-// │   ├── 04 - NPM - Scripts /
+// │   ├── 03 - package - json //: Status : Completed ✅
+// │   ├── 04 - NPM - Scripts //🔄 IN PROGRESS
 // │   ├── 05 - Modules /
 // │   ├── 06 - File - System /
 // │   └── 07 - Environment - Variables /
