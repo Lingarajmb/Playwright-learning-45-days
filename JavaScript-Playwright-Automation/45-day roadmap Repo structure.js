@@ -32,8 +32,8 @@
 // │
 // ├── 03 - Git - and - GitHub /
 // │   │
-// │   ├── 01 - Git - Basics //🔄 IN PROGRESS
-// │   ├── 02 - Branching /
+// │   ├── 01 - Git - Basics //: Status : Completed ✅
+// │   ├── 02 - Branching //🔄 IN PROGRESS
 // │   ├── 03 - Merge - and - Rebase /
 // │   ├── 04 - Pull - Requests /
 // │   └── 05 - GitHub - Workflow /
