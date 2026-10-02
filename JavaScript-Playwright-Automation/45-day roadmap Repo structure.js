@@ -26,13 +26,13 @@
 // │   ├── 02 - NPM //: Status : Completed ✅
 // │   ├── 03 - package - json //: Status : Completed ✅
 // │   ├── 04 - NPM - Scripts //: Status : Completed ✅
-// │   ├── 05 - Modules //🔄 IN PROGRESS
-// │   ├── 06 - File - System /
-// │   └── 07 - Environment - Variables /
+// │   ├── 05 - Modules //: Status : Completed ✅
+// │   ├── 06 - File - System //: Status : Completed ✅
+// │   └── 07 - Environment - Variables //: Status : Completed ✅
 // │
 // ├── 03 - Git - and - GitHub /
 // │   │
-// │   ├── 01 - Git - Basics /
+// │   ├── 01 - Git - Basics //🔄 IN PROGRESS
 // │   ├── 02 - Branching /
 // │   ├── 03 - Merge - and - Rebase /
 // │   ├── 04 - Pull - Requests /
