@@ -1,0 +1,40 @@
+Next Topic: .gitignore
+Tracker: Module 3 → Chapter 4 — GitHub and Pull Requests → .gitignore Playwright_Automation_with_Java…
+📁 Exact repository location
+We should use the existing Git/GitHub structure and not create a new folder.
+Before we start, one important point: I don't have a source-confirmed exact filename for the .gitignore lesson from the tracker itself, so I won't invent one.
+Concept 1 — What is .gitignore?
+A .gitignore file tells Git which files and folders it should not track in a repository.
+For example, in a JavaScript/Playwright project, you generally don't want Git to track generated or local-only files such as:
+node_modules/
+playwright-report/
+test-results/
+.env
+
+A .gitignore can contain patterns like:
+node_modules/
+.env
+test-results/
+playwright-report/
+
+Why do we use it?
+Imagine you run:
+npm install
+
+This creates:
+node_modules/
+
+You normally don't want thousands of dependency files to be committed to Git. Instead, your repository keeps package.json and the lock file, and another developer can run npm install.
+Similarly, .env may contain environment-specific configuration or secrets, so it should generally not be committed.
+Important rule
+.gitignore affects untracked files.
+If a file is already tracked by Git, simply adding it to .gitignore does not automatically stop tracking it.
+That's an important interview point. 👀
+🎯 Practice — Concept 1
+Answer these without looking up the answers:
+Q1. What is the purpose of a .gitignore file?
+Q2. Why would we add node_modules/ to .gitignore in a JavaScript/Playwright project?
+Q3. Why might .env be included in .gitignore?
+Q4. Does adding an already-tracked file to .gitignore automatically remove it from Git tracking? Explain.
+Q5. Give me 4 examples of files/folders you might want to ignore in a Playwright + JavaScript project.
+Send your Q1–Q5 answers, and I'll evaluate them individually. 💪
