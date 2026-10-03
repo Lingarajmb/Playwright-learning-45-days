@@ -34,8 +34,8 @@
 // │   │
 // │   ├── 01 - Git - Basics //: Status : Completed ✅
 // │   ├── 02 - Branching /: Status : Completed ✅
-// │   ├── 03 - Merge - and - Rebase //🔄 IN PROGRESS
-// │   ├── 04 - Pull - Requests /
+// │   ├── 03 - Merge - and - Rebase /: Status : Completed ✅
+// │   ├── 04 - Pull - Requests //🔄 IN PROGRESS
 // │   └── 05 - GitHub - Workflow /
 // │
 // ├── 04 - Playwright - Fundamentals /
